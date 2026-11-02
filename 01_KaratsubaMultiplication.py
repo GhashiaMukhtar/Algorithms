@@ -11,7 +11,7 @@ def karatsuba(x,y):
     c = y//10**m
     d = y%10**m
     ac = karatsuba(a,c)
-    bd = karatsuba(c,d)
+    bd = karatsuba(b,d)
     middle_value = karatsuba(a+b, c+d) - ac - bd
 
     return (10**(2 * m)*ac) + (10 ** m * middle_value) + bd
